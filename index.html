@@ -11,7 +11,21 @@
 
 <body>
 
-
+  <div class="wrapper">
+    <main>
+      <header>
+        <h1>Meme Generator</h1>
+        <h2>Let's make some memes!</h2>
+      </header>
+      <form action="submit">
+        <input type="text" name="imageURL" id="imageURL" placeholder="enter URL here" autocomplete="off">
+        <input type="text" name="toptext" id="toptext" placeholder="enter top text here" autocomplete="off">
+        <input type="text" name="bottomtext" id="bottomtext" placeholder="enter bottom text here" autocomplete="off">
+        <button type="submit">Generate meme</button>
+      </form>
+    </main>
+    <div class="memes"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
