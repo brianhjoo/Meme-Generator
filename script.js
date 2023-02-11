@@ -5,10 +5,8 @@ const bottomTxtInput = document.querySelector('#bottomtext');
 const memes = document.querySelector('.memes');
 
 
-
-
 function addMeme(url) {
-  const html = `<img src=${url} alt="meme">`;
+  const html = `<img src=${url} class="image" alt="meme">`;
   const div = document.createElement('div');
   div.className = 'meme';
   div.innerHTML = html;
@@ -37,8 +35,13 @@ function addBottomText() {
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  addMeme(url.value);
+  if (url.value) addMeme(url.value);
   form.reset();
 });
 
+memes.addEventListener('click', e => {
+  if (e.target.classList.contains('image')) {
+    e.target.parentElement.remove();
+  }
+});
 

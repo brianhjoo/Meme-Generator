@@ -44,22 +44,18 @@ body {
 img {
     width: 400px;
     height: 400px;
-    z-index: -1;
 }
 
 .meme {
     position: relative;
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.514);
     width: 400px;
     height: 400px;
-    z-index: 1;
 }
 
 .top-text,
 .bottom-text {
     position: absolute;
-    z-index: 2;
     color: white;
 }
 
