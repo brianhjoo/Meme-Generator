@@ -16,7 +16,7 @@ function addMeme(url) {
 }
 
 function addTopText() {
-  const topText = topTxtInput.value;
+  const topText = topTxtInput.value.trim();
   const div = document.createElement('div');
   div.className = 'top-text';
   div.innerText = topText;
@@ -24,8 +24,7 @@ function addTopText() {
 }
 
 function addBottomText() {
-  const bottomText = bottomTxtInput.value;
-  console.log(bottomText);
+  const bottomText = bottomTxtInput.value.trim();
   const div = document.createElement('div');
   div.className = 'bottom-text';
   div.innerText = bottomText;
@@ -35,9 +34,10 @@ function addBottomText() {
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  if (url.value) addMeme(url.value);
+  if (url.value.trim()) addMeme(url.value);
   form.reset();
 });
+
 
 memes.addEventListener('click', e => {
   if (e.target.classList.contains('image')) {
